@@ -130,7 +130,6 @@ with st.sidebar:
     st.divider()
     st.markdown(
         "<div style='font-size:.72rem;color:#94a3b8'>"
-        "PyMuPDF · dateparser · OpenAI gpt-4o-mini<br>"
         "Always verify outputs against source documents."
         "</div>",
         unsafe_allow_html=True,
@@ -169,7 +168,7 @@ col_btn, col_info = st.columns([2, 5])
 with col_btn:
     run = st.button(
         "⚡ Build Chronology",
-        type="primary",
+        type="secondary",
         disabled=not api_key,
         use_container_width=True,
     )
@@ -207,9 +206,12 @@ if run:
         log.info("Extraction complete. %d events stored.", len(all_ev))
     else:
         st.warning(
-            "No dated events found. "
-            "Check PDFs are text-based (not scanned images). "
-            "Scanned PDFs need OCR pre-processing."
+            "⚠️ No dated medical events found in the uploaded document(s).\n\n"
+            "This can happen when:\n"
+            "- The PDF is a scanned image (not text-based)\n"
+            "- The document contains no dates\n"
+            "- The file is password protected\n\n"
+            "Please try a text-based medical PDF such as a GP letter or discharge summary."
         )
 
 
