@@ -57,6 +57,11 @@ Streamlit UI (timeline cards / table / export)
 - Deduplication handles the same event appearing across multiple docs
 
 ---
+## Stack
+## Screenshot
+
+<img width="1362" height="599" alt="image" src="https://github.com/user-attachments/assets/856443d8-270b-4a0c-8c18-09a52d84bdea" />
+
 
 ## Stack
 
